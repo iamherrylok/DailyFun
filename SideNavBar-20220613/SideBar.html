@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./SideBar.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>SideBar Menu | Author Herry</title>
+    <script src="./SideBar.js" async></script>
+  </head>
+  <body>
+    <div class="SideBar">
+      <!-- logo content -->
+      <div class="logo_content">
+        <i class="bx bxl-c-plus-plus icon"></i>
+        <div class="logo_name">CodingLab</div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+
+      <!-- list -->
+      <ul class="nav_list">
+        <li class="list_item">
+          <div>
+            <i class="bx bx-search"></i>
+            <input type="text" placeholder="Search..." />
+          </div>
+          <span class="tooltip">Search</span>
+        </li>
+        <li class="list_item">
+          <a href="#">
+            <i class="bx bx-grid-alt"></i>
+            <span class="links_name">DashBoard</span>
+          </a>
+          <span class="tooltip">DashBoard</span>
+        </li>
+        <li class="list_item">
+          <a href="#">
+            <i class="bx bx-user"></i>
+            <span class="links_name">User</span>
+          </a>
+          <span class="tooltip">User</span>
+        </li>
+        <li class="list_item">
+          <a href="#">
+            <i class="bx bx-chat"></i>
+            <span class="links_name">Messages</span>
+          </a>
+          <span class="tooltip">Messages</span>
+        </li>
+        <li class="list_item">
+          <a href="#">
+            <i class="bx bx-pie-chart-alt-2"></i>
+            <span class="links_name">Analytics</span>
+          </a>
+          <span class="tooltip">Analytics</span>
+        </li>
+        <li class="list_item">
+          <a href="#">
+            <i class="bx bx-folder"></i>
+            <span class="links_name">File Manager</span>
+          </a>
+          <span class="tooltip">File Manager</span>
+        </li>
+        <li class="list_item">
+          <a href="#">
+            <i class="bx bx-cart-alt"></i>
+            <span class="links_name">Order</span>
+          </a>
+          <span class="tooltip">Order</span>
+        </li>
+        <li class="list_item">
+          <a href="#">
+            <i class="bx bx-heart"></i>
+            <span class="links_name">Save</span>
+          </a>
+          <span class="tooltip">Save</span>
+        </li>
+        <li class="list_item">
+          <a href="#">
+            <i class="bx bx-cog"></i>
+            <span class="links_name">Setting</span>
+          </a>
+          <span class="tooltip">Setting</span>
+        </li>
+
+        <!-- User -->
+        <li class="profile">
+          <div class="profile_details">
+            <img src="./ben.jpg" alt="Prem Shahi" />
+            <div class="name_job">
+              <div class="name">Prem Shahi</div>
+              <div class="job">Web Designer</div>
+            </div>
+          </div>
+
+          <i class="bx bx-log-out" id="log_out"></i>
+        </li>
+      </ul>
+    </div>
+
+    <section class="home-section">
+      <div class="text">DashBoard</div>
+    </section>
+  </body>
+</html>

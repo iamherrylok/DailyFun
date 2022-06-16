@@ -1,0 +1,295 @@
+/* font link */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.SideBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 78px;
+  background: #11101d;
+  padding: 6px 14px;
+  z-index: 99;
+  transition: all 0.5s ease;
+}
+
+.SideBar.open {
+  width: 250px;
+}
+
+.SideBar .logo_content {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.SideBar .logo_content .icon {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.SideBar .logo_content .logo_name {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.SideBar .logo_content #btn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: all 0.5s ease;
+  text-align: center;
+  cursor: pointer;
+}
+
+.SideBar.open .logo_content #btn {
+  text-align: right;
+}
+
+.SideBar i {
+  color: #fff;
+  height: 60px;
+  min-width: 50px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 60px;
+}
+
+.SideBar .nav_list {
+  margin-top: 20px;
+  height: 100%;
+}
+
+.SideBar li {
+  position: relative;
+  margin: 8px 0;
+  list-style: none;
+}
+
+.SideBar li .tooltip {
+  position: absolute;
+  top: -20px;
+  left: calc(100% + 15px);
+  z-index: 3;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: 0s;
+}
+
+.SideBar li:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.SideBar.open li .tooltip {
+  display: none;
+}
+
+.SideBar input {
+  font-size: 15px;
+  color: #fff;
+  font-weight: 400;
+  outline: none;
+  height: 50px;
+  width: 100%;
+  border: none;
+  background: #1d1b31;
+  border-radius: 12px;
+  padding-left: 50px;
+  transition: all 0.5s ease;
+}
+
+.SideBar.open input {
+  padding: 0 20px 0 50px;
+  width: 100%;
+}
+
+.SideBar .bx-search {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #fff;
+  z-index: 99;
+  font-size: 22px;
+  background-color: #1d1b31;
+}
+
+.SideBar.open .bx-search:hover {
+  background-color: #1d1b31;
+  color: #fff;
+}
+
+.SideBar.open .bx-search:hover {
+  background-color: #1d1b31;
+  color: #11101d;
+}
+
+.SideBar li a {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  background: #11101d;
+}
+
+.SideBar li a:hover {
+  background-color: #fff;
+}
+
+.SideBar ul li a:hover {
+  background-color: #fff;
+  color: #11101d;
+}
+
+.SideBar li a .links_name {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: 0.4s;
+  opacity: 0;
+}
+
+.SideBar.open li a .links_name {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.SideBar li a:hover .links_name,
+.SideBar li a:hover i {
+  transition: all 0.5s ease;
+  color: #11101d;
+}
+
+.SideBar .profile {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  color: #fff;
+}
+
+.SideBar li i {
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  border-radius: 12px;
+}
+
+.SideBar li.profile {
+  position: fixed;
+  height: 60px;
+  width: 78px;
+  left: 0;
+  bottom: -8px;
+  padding: 10px 14px;
+  background-color: #1d1b31;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+
+.SideBar.open li .profile {
+  width: 250px;
+}
+
+.SideBar li .profile_details {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.SideBar li img {
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+
+.SideBar li.profile .name,
+.SideBar li.profile .job {
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.SideBar li.profile .job {
+  font-size: 12px;
+}
+
+.SideBar .profile #log_out {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: #1d1b31;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 0px;
+  transition: all 0.5s ease;
+}
+
+.SideBar.open .profile #log_out {
+  width: 50px;
+  background: none;
+}
+
+.home-section {
+  position: relative;
+  background-color: #e4e9f7;
+  min-height: 100vh;
+  top: 0;
+  left: 78px;
+  width: calc(100%-78px);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+.SideBar.open ~ .home-section {
+  left: 250px;
+  width: calc(100%-250px);
+}
+
+.home-section .text {
+  display: inline-block;
+  color: #11101d;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 18px;
+}
+
+@media (max-width: 420px) {
+  .SideBar li .tooltip {
+    display: none;
+  }
+}
